@@ -1,0 +1,62 @@
+.item-card__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+
+  background-color: var(--background-color);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 16px;
+  transition: background-color 0.3s, color 0.3s;
+
+  @media (prefers-color-scheme: dark) {
+    --background-color: #333;
+    --text-color: #fff;
+    --border-color: #444;
+  }
+
+  @media (prefers-color-scheme: light) {
+    --background-color: #fff;
+    --text-color: #000;
+    --border-color: #ddd;
+  }
+}
+
+.item-card__title {
+  margin: unset;
+  text-align: center;
+}
+
+.item-card__description {
+  font-size: 0.85rem;
+  padding: 0 0.5rem;
+}
+
+.item-card__status {
+  font-size: 0.8rem;
+  display: block;
+  width: 100%;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.item-card__status--done {
+  background-color: green;
+}
+
+.item-card__status--progress {
+  background-color: #007bff;
+}
+
+.item-card__status--pending {
+  background-color: grey;
+}

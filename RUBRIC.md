@@ -1,0 +1,20 @@
+# **TodoApp Evaluation Rubric**
+
+This rubric outlines the criteria for evaluating the **React-based TodoApp** challenge.
+
+| **Criterion**                  | **Not Achieved**                                                                         | **Partially Achieved**                                                                                            | **Halfway Achieved**                                                                          | **Remarkably Achieved**                                                                                 | **Completely Achieved**                                                                                                              | **Weighting** |
+| ------------------------------ | ---------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ | ------------- |
+| **Component Structure**        | Components missing or significantly deviating from requirements.                         | Some required components are missing or not reusable.                                                             | All components exist but have major implementation flaws.                                     | All components exist with minor issues in reusability or structure.                                     | All components are correctly implemented, reusable, and structured according to requirements.                                        | 35%           |
+| **Styling & UX**               | No styling applied or does not resemble the provided prototype. No BEM methodology used. | Basic styling applied but lacks mobile-first design or has major inconsistencies. Minimal use of BEM methodology. | Styling follows the prototype but is incomplete or inconsistent. Some use of BEM methodology. | Mostly adheres to the prototype, with minor issues in mobile-first design. Good use of BEM methodology. | Fully adheres to the prototype with a responsive, mobile-first design and component-scoped styles. Excellent use of BEM methodology. | 25%           |
+| **Code Quality & Reusability** | Code is unstructured, duplicated, or does not follow best practices.                     | Some reusable components exist but code is inconsistent.                                                          | Code follows some best practices but has significant redundancy or issues.                    | Code is well-structured and mostly reusable, with minor issues.                                         | Clean, maintainable, reusable, and well-structured code following best practices.                                                    | 30%           |
+| **DevOps & Deployment**        | App is not deployed or fails to run in a preview environment.                            | App is deployed but has major issues or errors in the console.                                                    | App is deployed but with minor issues or warnings in the console.                             | App is deployed correctly with no critical errors but minor console warnings.                           | App is fully deployed, accessible via URL, and runs without console errors.                                                          | 10%           |
+
+---
+
+### **Notes**
+
+- Ensure all components follow the defined requirements and are reusable where applicable.
+- The application must be mobile-first and match the provided prototype.
+- The project should have a clear, maintainable, and scalable structure.
+- The deployed application should be functional and accessible via a preview URL.
+- The console should be free of errors or warnings in the final version.
