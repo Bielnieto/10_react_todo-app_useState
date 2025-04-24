@@ -1,0 +1,150 @@
+/* Dark mode */
+:root {
+    --bg-gradient-start: #343434;
+    --bg-gradient-end: #343434;
+    --text-primary: #e5e7eb;
+    --text-secondary: #d1d5db;
+    --border-color: #374151;
+    --border-hover: #4b5563;
+    --input-bg: #222222;
+    --button-gradient-start: #4f46e5;
+    --button-gradient-end: #4338ca;
+    --button-hover-start: #4338ca;
+    --button-hover-end: #3730a3;
+    --button-active-start: #3730a3;
+    --button-active-end: #312e81;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    --shadow-color-light: rgba(0, 0, 0, 0.2);
+    --focus-ring: rgba(79, 70, 229, 0.4);
+  }
+  
+  /* Light mode */
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg-gradient-start: #ffffff;
+      --bg-gradient-end: #f5f7fa;
+      --text-primary: #374151;
+      --text-secondary: #1f2937;
+      --border-color: #e5e7eb;
+      --border-hover: #d1d5db;
+      --input-bg: #ffffff;
+      --button-gradient-start: #3b82f6;
+      --button-gradient-end: #2563eb;
+      --button-hover-start: #2563eb;
+      --button-hover-end: #1d4ed8;
+      --button-active-start: #1d4ed8;
+      --button-active-end: #1e40af;
+      --shadow-color: rgba(0, 0, 0, 0.1);
+      --shadow-color-light: rgba(0, 0, 0, 0.06);
+      --focus-ring: rgba(59, 130, 246, 0.4);
+    }
+  }
+  
+  .task-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    max-width: 600px;
+    width: 100%;
+    margin: 1rem auto;
+    padding: 2rem;
+    background: linear-gradient(145deg, var(--bg-gradient-start), var(--bg-gradient-end));
+    border-radius: 12px;
+    box-shadow: 
+      0 4px 6px -1px var(--shadow-color),
+      0 2px 4px -1px var(--shadow-color-light);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .form-group label {
+    font-weight: 600;
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    letter-spacing: 0.025em;
+    margin-bottom: 0.25rem;
+  }
+  
+  .form-input {
+    padding: 0.875rem 1rem;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 1rem;
+    color: var(--text-secondary);
+    background-color: var(--input-bg);
+    transition: all 0.2s ease;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .form-input:focus {
+    outline: none;
+    border-color: var(--button-gradient-start);
+    box-shadow: 0 0 0 3px var(--focus-ring);
+  }
+  
+  textarea.form-input {
+    min-height: 120px;
+    resize: vertical;
+    line-height: 1.5;
+  }
+  
+  select.form-input {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 0.75rem center;
+    background-repeat: no-repeat;
+    background-size: 1.5em 1.5em;
+    padding-right: 2.5rem;
+  }
+  
+  .submit-button {
+    padding: 1rem 1.5rem;
+    background: linear-gradient(135deg, var(--button-gradient-start), var(--button-gradient-end));
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-top: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  
+  .submit-button:hover {
+    background: linear-gradient(135deg, var(--button-hover-start), var(--button-hover-end));
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2);
+  }
+  
+  .submit-button:active {
+    transform: translateY(0);
+    background: linear-gradient(135deg, var(--button-active-start), var(--button-active-end));
+    box-shadow: 0 2px 4px -1px rgba(37, 99, 235, 0.2);
+  }
+  
+  .submit-button:focus {
+    outline: none;
+    box-shadow: 
+      0 0 0 3px var(--focus-ring),
+      0 4px 6px -1px var(--shadow-color);
+  }
+  
+  @media (max-width: 640px) {
+    .task-form {
+      margin: 0.5rem;
+      padding: 1.5rem;
+    }
+  
+    .submit-button {
+      padding: 0.875rem 1.25rem;
+    }
+  }
+  
